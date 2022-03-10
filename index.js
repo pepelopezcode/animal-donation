@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", () =>{
-    fetch('https://zoo-animal-api.herokuapp.com/animals/rand/6')
+    fetch('https://zoo-animal-api.herokuapp.com/animals/rand/8')
     .then(resp => resp.json())
-    .then(data => {console.log(data)
-        //iterateAnimalArray(data)
+    .then(data => {
+        iterateAnimalArray(data)
     })
 })
 
@@ -16,4 +16,30 @@ function iterateAnimalArray(animalArray){
 
 function renderAnimal(animalObject){
     //creates the div for the animal and all its coresponding elements
+    const animalCard = document.createElement('div');
+    const animalContain = document.getElementById('animalContainer');
+    const animalName = document.createElement('h2');
+    const animalInfo1 = document.createElement('h3');
+    const moneyDonated = document.createElement('h3');
+
+    const animalImage = document.createElement('img');
+    const donateButton = document.createElement('button');
+    let money = animalObject.id;
+    donateButton.addEventListener('click', () => {
+        money += 10;
+        moneyDonated.innerText = `Dontaions $${money}`;
+    })
+    moneyDonated.setAttribute('class', "child");
+    donateButton.setAttribute('class', "child");
+    moneyDonated.innerText = `Dontaions $${money}`
+    animalInfo1.innerText = `Habitat: ${animalObject.habitat} 
+    Animal Type: ${animalObject.animal_type}`
+    animalCard.setAttribute('class', 'card');
+    animalImage.setAttribute('class', 'animalImage')
+    donateButton.innerText = 'Donate $10'
+    animalName.innerText = animalObject.name;
+    animalImage.src = animalObject.image_link;
+    animalContain.append(animalCard);
+    animalCard.append(animalName, animalImage, animalInfo1, moneyDonated, donateButton)
+
 }

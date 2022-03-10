@@ -1,0 +1,45 @@
+.card {
+    text-align: center;
+    border: grey solid 1px;
+    padding: 1rem;
+    width: 20rem;
+    height: 30rem;
+    display: inline-grid;
+    margin: 1rem 2rem;
+    box-shadow: 3px 4px #000000;
+    background-color: rgb(206, 183, 154);
+  }
+  
+  .animalImage {
+       border: black solid 2px;
+    justify-self: center;
+    height: 194px;
+    width: 192px;
+  }
+  
+  
+#animalContainer {
+    margin: 2rem;
+  }
+  body {
+    margin: 0;
+    font-family: monospace;
+    background-color: rgb(65, 143, 65);
+  }
+  button {
+    position: relative;
+    background-color: #e04b52;
+    border: none;
+    border-radius: 5px;
+    height: 3rem;
+    width: max-content;
+    color: whitesmoke;
+    font-size: 18px;
+    justify-self: center;
+  }
+  
+  button:hover {
+    background-color: whitesmoke;
+    border: #e04b52 solid 1px;
+    color: #e04b52;
+  }
