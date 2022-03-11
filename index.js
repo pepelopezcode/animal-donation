@@ -4,6 +4,24 @@ document.addEventListener("DOMContentLoaded", () =>{
     .then(data => {
         iterateAnimalArray(data)
     })
+   
+ const footer = document.createElement('div');
+footer.id = 'footer'
+
+const randomButton = document.createElement('button');
+randomButton.id = 'random-button'
+randomButton.textContent = 'Choose from different animals'
+
+footer.append(randomButton)
+const resetAnimals = document.getElementById('reset')
+
+randomButton.addEventListener('click', reload, false)
+
+resetAnimals.append(footer)
+
+
+
+
 })
 
 
@@ -42,4 +60,8 @@ function renderAnimal(animalObject){
     animalContain.append(animalCard);
     animalCard.append(animalName, animalImage, animalInfo1, moneyDonated, donateButton)
 
+}
+
+function reload() {
+    reload = location.reload();
 }

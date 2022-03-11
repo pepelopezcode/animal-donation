@@ -43,3 +43,21 @@
     border: #e04b52 solid 1px;
     color: #e04b52;
   }
+#footer{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  
+}
+#titleHeader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    background-color:rgb(206, 183, 154);
+}
+.banner{
+    height: 200px;
+    
+}
