@@ -8,7 +8,7 @@ As a user I would like to:
   
   -[x] click donate to donate money to a fund for said animal
   
-  -[x] add a comment to my donation
+  -[x] be able to see how much money has been donated and wanna see my amount aded to the total
   
   -[x] choose from different animals if no animals interest me 
 
